@@ -16,7 +16,7 @@ from helpers import resize_to_fit
 # MODEL_FILENAME = "captcha_model.hdf5"
 # MODEL_LABELS_FILENAME = "model_labels.dat"
 
-LETTER_IMAGES_FOLDER = "images"
+LETTER_IMAGES_FOLDER = "111own_extracted_single_letter_images"
 MODEL_FILENAME = "captcha_model3.hdf5"
 MODEL_LABELS_FILENAME = "model_labels3py.dat"
 
@@ -99,7 +99,7 @@ test_score = model.evaluate(X_test, Y_test)
 print("Test loss {:.4f}, accuracy {:.2f}%".format(test_score[0], test_score[1] * 100))
 
 # Train the neural network
-model.fit(X_train, Y_train, validation_data=(X_test, Y_test), batch_size=32, epochs=10, verbose=1)
+model.fit(X_train, Y_train, validation_data=(X_test, Y_test), batch_size=32, epochs=4, verbose=1)
 
 # Save the trained model to disk
 model.save(MODEL_FILENAME)

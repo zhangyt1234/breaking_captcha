@@ -73,6 +73,7 @@ model.add(Conv2D(64, (8, 8), padding="same", input_shape=(64, 64, 1), activation
 model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
 
 # Second convolutional layer with max pooling
+# model.add(Conv2D(50, (5, 5), padding="same", activation="relu"))
 model.add(Conv2D(192, (8, 8), padding="same", activation="relu"))
 model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
 
